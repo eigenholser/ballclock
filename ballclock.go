@@ -16,6 +16,7 @@ type ClockData struct {
 	queueLength int
 }
 
+// This function could be refactored to remove some redundancy.
 func ElevateBall(data *ClockData) bool {
 	var ball = data.queue[0]
 	data.queue = data.queue[1:]
