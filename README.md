@@ -1,0 +1,4 @@
+ballclock
+=========
+
+The ballclock challenge
