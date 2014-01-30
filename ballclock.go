@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 import "flag"
 
@@ -8,10 +9,10 @@ const TrackTwoSize int = 12
 const TrackThreeSize int = 12
 
 type ClockData struct {
-	track1 []int
-	track2 []int
-	track3 []int
-	queue []int
+	track1      []int
+	track2      []int
+	track3      []int
+	queue       []int
 	queueLength int
 }
 
@@ -56,7 +57,7 @@ func CheckQueue(data *ClockData) bool {
 		return false
 	}
 	for i := 0; i < data.queueLength; i++ {
-		if data.queue[i] != i + 1 {
+		if data.queue[i] != i+1 {
 			return false
 		}
 	}
@@ -75,10 +76,10 @@ func main() {
 	}
 
 	data := ClockData{
-		track1: make([]int, 0),
-		track2: make([]int, 0),
-		track3: make([]int, 0),
-		queue: queue,
+		track1:      make([]int, 0),
+		track2:      make([]int, 0),
+		track3:      make([]int, 0),
+		queue:       queue,
 		queueLength: *queueLength,
 	}
 
@@ -89,5 +90,5 @@ func main() {
 		}
 	}
 
-	fmt.Printf("The cycle completed in %d days.\n", minutes / MinutesPerDay )
+	fmt.Printf("The cycle completed in %d days.\n", minutes/MinutesPerDay)
 }
